@@ -50,7 +50,7 @@ class Game:
         return power
 
 
-def parse_input(input_str) -> dict:
+def parse_input(input_str) -> Game:
     game_id = int(input_str.split(":")[0].split(" ")[-1])
     games = input_str.split(":")[1].split(";")
     game = Game(game_id, games)
