@@ -1,6 +1,3 @@
-"""
-To run this code, you will need atleast 8 gigs of ram
-"""
 from utils import Card
 
 cards_dict: dict[str: list[Card]] = {}
