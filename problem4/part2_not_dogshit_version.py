@@ -1,10 +1,10 @@
 from utils import Card
 
-cards_dict: dict[str: list[Card]] = {}
+cards_dict: dict[str:Card] = {}
 card_copies: dict[str:int] = {}
 
 
-def insert_cards(card_id: int):
+def insert_cards(card_id: int) -> None:
     insert_idx = card_id + 1
     copies = cards_dict[card_id].overlap
     for i in range(copies):
@@ -12,7 +12,7 @@ def insert_cards(card_id: int):
         insert_idx += 1
 
 
-def count_cards(cards_dict):
+def count_cards(cards_dict) -> int:
     count = 0
     for card_id in cards_dict:
         count += cards_dict[card_id]
