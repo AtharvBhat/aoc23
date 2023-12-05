@@ -1,7 +1,4 @@
 # flake8: noqa
-from functools import cache
-
-
 class Map:
     def __init__(self, name: str, ranges: list[list[int]]) -> None:
         self.name = name
@@ -32,7 +29,7 @@ class Map:
                 ):
                     mapped |= True
                     capacity = src_start + range_len - current_pointer
-                    consumed = capacity if remaining >= capacity else remaining
+                    consumed = min(remaining, capacity)
                     map_ranges.append(
                         [dst_start + (current_pointer - src_start), consumed]
                     )
