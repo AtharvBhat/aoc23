@@ -1,7 +1,5 @@
 # flake8: noqa
-from utils import Map, parse_input
-from tqdm.auto import tqdm
-import numpy as np
+from utils import parse_input
 
 
 def convert_seed_ranges(range_list: int) -> list[list[int]]:
